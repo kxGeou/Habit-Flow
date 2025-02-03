@@ -1,6 +1,5 @@
-// src/components/UserInfo.tsx
 import React from 'react';
-import { auth } from '../firebase';
+import { auth } from '../../firebase';
 
 const UserInfo: React.FC<{ userEmail: string, onLogout: () => void }> = ({ userEmail, onLogout }) => {
   return (

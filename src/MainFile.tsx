@@ -1,28 +1,23 @@
-import Navigation from "./Components/Navigation"
-import HeroSection from "./Components/HeroSection"
-import AboutUs from "./Components/AboutUs"
-import Footer from "./Components/Footer"
-import { Link } from "react-router-dom"
+import Navigation from "./Components/MainPage/Navigation"
+import HeroSection from "./Components/MainPage/HeroSection"
+import AboutUs from "./Components/MainPage/AboutUs"
+import Footer from "./Components/MainPage/Footer"
+import Motivation from "./Components/MainPage/Motivation"
 export default function MainFile() {
 
   return (
     <main className="max-w-[1150px] flex flex-col m-auto py-8">
       <Navigation></Navigation>
-      <section className="flex items-center h-[85vh]">
+      <div className="flex items-center h-[85vh]">
         <HeroSection></HeroSection>
-      </section>
-      <section>
+      </div>
+      <div>
         <AboutUs></AboutUs>
-      </section>
-      <Link to={"/login"}>Zaloguj się </Link>
-
-      <section>
+      </div>
+      <div>
+        <Motivation></Motivation>
+      </div> 
         <Footer></Footer>
-      </section>
-
-{/* 
-      <Login onLogin={handleLogin} />
-      <Register onRegister={handleRegister} /> */}
     </main>
   )
 }

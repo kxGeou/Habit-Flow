@@ -1,6 +1,6 @@
 import Description from "./Description"
-import Button from "./Button"
-import Hero from '../assets/hero.svg';
+import Button from "../Button"
+import Hero from '../../assets/hero.svg';
 
 export default function HeroSection() {
   return (
