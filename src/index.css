@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
+@layer base {
+    :root {
+        --primary : #1C1B1F;
+        --secondary: #3E3C43;
+    }
+
+    * {
+        @apply transition-colors duration-500 ease-in-out;
+    }
+}
+
+*{
+    color: #1C1B1F;
     font-family: Arial, Helvetica, sans-serif;
 }
