@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 export default function Navigation() {
   return (
     <nav className="flex justify-between">
@@ -6,7 +6,7 @@ export default function Navigation() {
       <section className="flex items-center justify-between gap-[2rem]">
         <a href="#">About</a>
         <div className="bg-[#1C1B1F] h-full flex justify-center items-center text-white rounded-[24px] w-[142px]">
-            <a href="#">Register</a>
+            <Link to={"/register"}>Register</Link>
         </div>
       </section>
     </nav>
