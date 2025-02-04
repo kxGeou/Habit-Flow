@@ -1,4 +1,4 @@
-import Description from "./Description";
+import Description from "../Components/ui/Description";
 import Tutorial from "./Tutorial";
 
 export default function AboutUs(){

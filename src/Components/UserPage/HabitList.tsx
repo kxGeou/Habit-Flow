@@ -1,6 +1,6 @@
 // src/components/HabitsPage.tsx
 import React, { useState, useEffect } from 'react';
-import { db, auth } from '../../firebase';
+import { db, auth } from '../../firebase/firebase';
 import { collection, addDoc, query,  getDocs } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
 

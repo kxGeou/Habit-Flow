@@ -1,8 +1,8 @@
-import Navigation from "./Components/MainPage/Navigation"
-import HeroSection from "./Components/MainPage/HeroSection"
-import AboutUs from "./Components/MainPage/AboutUs"
-import Footer from "./Components/MainPage/Footer"
-import Motivation from "./Components/MainPage/Motivation"
+import Navigation from "../Components/Navigation"
+import HeroSection from "../Components/HeroSection"
+import AboutUs from "../Components/AboutUs"
+import Footer from "../Components/Footer"
+import Motivation from "../Components/Motivation"
 export default function MainFile() {
 
   return (

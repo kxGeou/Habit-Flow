@@ -1,4 +1,4 @@
-import User from '../../assets/user.svg';
+import User from '../assets/user.svg';
 
 type UserIconPrompts = {
     expLevel?: number;

@@ -1,11 +1,11 @@
 // src/App.tsx
 import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import { auth } from './firebase';
+import { auth } from './firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import Register from './Components/UserPage/Register';
 import Login from './Components/UserPage/Login';
-import MainFile from './MainFile';
+import MainFile from './pages/MainFile';
 import HabitsList from './Components/UserPage/HabitList';
 
 const App: React.FC = () => {
