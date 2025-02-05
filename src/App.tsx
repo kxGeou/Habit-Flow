@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { auth } from './firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import Register from './Components/UserPage/Register';
+import RegisterScreen from './/pages/RegisterScreen'
 import Login from './Components/UserPage/Login';
 import MainFile from './pages/MainFile';
 import HabitsList from './Components/UserPage/HabitList';
-
+import LoginScreen from './pages/LoginScreen';
 const App: React.FC = () => {
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
@@ -30,9 +30,9 @@ const App: React.FC = () => {
           {/* Strona główna */}
           <Route path="/" element={<MainFile />} />
 
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<LoginScreen />} />
 
-          <Route path="/register" element={<Register />} />
+          <Route path="/register" element={<RegisterScreen />} />
 
           <Route
             path="/habits"
