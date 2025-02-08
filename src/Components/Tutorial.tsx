@@ -4,7 +4,7 @@ import User from "../assets/user.png";
 type UserProps = {
   userExp: number;
 };
-const HabitBlock = () => {
+const   HabitBlock = () => {
   const [days, setDays] = useState<string[]>(Array(35).fill("gray"));
   const [habitName, setHabitName] = useState<string>("🌠 Example Task");
   const [isEditing, setIsEditing] = useState<boolean>(false);
@@ -48,10 +48,13 @@ const HabitBlock = () => {
             <p className={`text-textColor ${streak > 0 ? "block" : "hidden"}`}>{streak}🔥</p>
           </div>
           <progress
-            max="2000"
-            value={userExp}
-            className="h-[0.75rem] w-full"
-          ></progress>
+          max="2000"
+          value={userExp}
+          className="appearance-none h-[0.75rem] w-full bg-gray-200  
+             [&::-webkit-progress-bar]:bg-stroke 
+             [&::-webkit-progress-value]:bg-mainColor 
+             [&::-moz-progress-bar]:bg-mainColor"
+        ></progress>
         </div>
       </div>
     );
