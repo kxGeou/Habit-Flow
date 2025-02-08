@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import User from "../assets/user.png";
-
+import useWindowWidth from "../hooks/UseWindowWidth";
 type UserProps = {
   userExp: number;
 };
@@ -10,7 +10,7 @@ const   HabitBlock = () => {
   const [isEditing, setIsEditing] = useState<boolean>(false);
   const [userExp, setUserExp] = useState<number>(0);
   const [streak, setStreak] = useState<number>(0);
-
+  const width = useWindowWidth()
   const toggleNextDay = (color: string) => {
     const newDays = [...days];
     const nextIndex = newDays.findIndex((day) => day === "gray");
@@ -33,15 +33,15 @@ const   HabitBlock = () => {
         <img
           src={User}
           alt="minimalistic image of user"
-          className="w-[15rem]"
+          className={`w-[15rem] ${width < 750 ? "w-[7.5rem]" : ""}`}
         />
-        <div className="bg-[#1C1B1F] py-3 px-5 w-[30rem] rounded-[12px]">
+        <div className={`bg-secondary py-3 px-5 w-[30rem] rounded-[12px]  ${width < 750 ? "w-[19rem]" : ""}`}>
           <div className="flex justify-between">
             <div>
-              <p className="text-white font-semibold text-[20px] mb-2">
+              <p className="text-textColor font-semibold text-[20px] mb-2">
                 John Smith
               </p>
-              <p className="text-white opacity-50 font-normal text-[16px] mb-2">
+              <p className="text-textColor opacity-50 font-normal text-[16px] mb-2">
                 🍬 Beginning Habbiter
               </p>
             </div>
@@ -61,7 +61,9 @@ const   HabitBlock = () => {
   }
 
   return (
-    <div className="flex justify-between w-full items-center gap-6 ">
+    <div className={`flex justify-between items-center gap-6 ${width < 1200 ? "flex-col gap-16" : ""}`}>
+      <UserBar userExp={userExp}></UserBar>
+
       <div className="bg-secondary rounded-[12px] ">
         <div className="flex items-center rounded-ss-[12px] rounded-se-[12px] p-6 gap-2  bg-secondaryBox">
           {isEditing ? (
@@ -107,7 +109,6 @@ const   HabitBlock = () => {
         </button>
       </div>
 
-      <UserBar userExp={userExp}></UserBar>
     </div>
   );
 };

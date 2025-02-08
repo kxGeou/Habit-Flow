@@ -9,6 +9,7 @@ export default {
         mainColor: "var(--mainColor)",
         secondary: "var(--secondary)",
         secondaryBox: "var(--secondaryBox)",
+        mobileBgc: "var(--mobileBgc)",
         button : "rgba(var(--button))",
         textColor: "var(--text)",
         stroke : "var(--stroke)",

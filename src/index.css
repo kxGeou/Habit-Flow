@@ -4,8 +4,9 @@
 
 :root {
         --text : #f0f0f0;
-        --secondary : #161617;
-        --secondaryBox : #1F1E20;
+        --secondary : #17171a;
+        --secondaryBox : #212023;
+        --mobileBgc : #70628e;
         --mainColor : #9852EE;
         --mediumDark : #6737A3;
         --darkMain : #3D1F62;

@@ -1,10 +1,11 @@
+import useWindowWidth from "../hooks/UseWindowWidth";
 type aboutUsWrapperProps = {
   title : string;
   description : string;
 }
 
 export default function AboutUs() {
-  
+  const width = useWindowWidth();
   const data = [ 
     {
       title: "What is HabitFlow?",
@@ -18,20 +19,20 @@ export default function AboutUs() {
 
   function AboutUsWrapper({title, description}: aboutUsWrapperProps) {
     return (
-      <div className="w-[35%] bg-secondary p-[2rem] rounded-[12px] text-textColor">
+      <div className={`w-[35%] bg-secondary p-[2rem] rounded-[12px] text-textColor ${width < 1200 ? "w-[75%]" : ""}`}>
         <div className="flex gap-2 items-center mb-8">
           <div className="rounded-full h-3 w-3 bg-mainColor"></div>
           <div className="rounded-full h-3 w-3 bg-mediumDark"></div>
           <div className="rounded-full h-3 w-3 bg-darkMain"></div>
         </div>
-        <h2 className="text-[1.75rem] mb-2">{title}</h2>
-        <p className="opacity-75 text-[18px]">{description}</p>
+        <h2 className="w-full text-[1.75rem] mb-2">{title}</h2>
+        <p className="w-full opacity-75 text-[18px]">{description}</p>
       </div>
     )
   }
 
   return (
-      <section className="flex justify-between items-center">
+      <section className={`transition-all w-full duration-300 flex justify-between items-center ${width < 1200 ? "flex-col gap-12": ""}`}>
         {data.map((item, index) => (
           <AboutUsWrapper key={index} title={item.title} description={item.description}></AboutUsWrapper>
         ))}
