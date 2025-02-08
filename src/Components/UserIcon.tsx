@@ -1,4 +1,4 @@
-import User from "../assets/user.svg";
+import User from "../assets/user.png";
 import Challenge from "./Challenges";
 import { useState } from "react";
 
@@ -8,19 +8,19 @@ type UserIconPrompts = {
 
 const challenges = [
   {
-    exp: 25,
+    exp: 125,
     title: "7-Day Streak Challenge",
     description: "Complete any habit 7 days in a row without missing a day!",
     icon: "🏆",
   },
   {
-    exp: 50,
+    exp: 250,
     title: "Habit Mastery Challenge",
     description: "Successfully track 50 completed habits in total.",
     icon: "📅",
   },
   {
-    exp: 40,
+    exp: 140,
     title: "3-Habit Power Challenge",
     description:
       "Maintain progress on 3 different habits for at least 10 days.",
@@ -37,7 +37,7 @@ function UserBar({ expLevel }: UserIconPrompts) {
         <p className="text-white opacity-50 font-normal text-[14px] mb-2">
           🍬 Beginning Habbiter
         </p>
-        <progress max="200" value={expLevel} className="h-[0.75rem] w-full"></progress>
+        <progress max="2000" value={expLevel} className="h-[0.75rem] w-full"></progress>
       </div>
     </div>
   );

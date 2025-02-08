@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom"
+import Logo from "../assets/logoooo.png";
+
 export default function Navigation() {
   return (
-    <nav className="flex justify-between">
-      <article className={`bg-[#1C1B1F] h-[42px] w-[72px] rounded-[8px]`}></article>
+    <nav className="flex justify-between items-center">
+      <img src={Logo} alt="Logo of our company" />
       <section className="flex items-center justify-between gap-[2rem]">
-        <a href="#" className="opacity-[85%] border-b-2 hover:opacity-100 hover:border-black">About</a>
-        <div className="cursor-pointer bg-[#1C1B1F] h-full flex justify-center items-center text-white rounded-[12px] w-[142px] transition-all duration-500 hover:rounded-[24px]">
-            <Link to={"/register"}>Register</Link>
-        </div>
+        <a href="#" className="transition-all duration-300 opacity-[75%] border-b-2 border-b-transparent text-white hover:opacity-100 hover:border-b-stroke ">About</a>
+        <Link to={"/register"} className="cursor-pointer bg-button/10 h-[3rem] border border-stroke flex justify-center items-center text-white rounded-[12px] w-[142px] transition-all duration-500 hover:rounded-[24px]">Register</Link>
       </section>
     </nav>
   )
