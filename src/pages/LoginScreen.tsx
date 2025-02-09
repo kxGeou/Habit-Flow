@@ -3,15 +3,15 @@ import React, { useState } from "react";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../firebase/firebase";
 import { useNavigate } from "react-router-dom";
-import ImgLogin from "../assets/login.svg";
 import { Link } from "react-router-dom";
-
+import Logo from '../assets/logoooo.png';
+import useWindowWidth from "../hooks/UseWindowWidth";
 const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
+  const width = useWindowWidth();
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
@@ -23,42 +23,49 @@ const Login: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col h-screen justify-center items-center  ">
-      <div className="  flex flex-col p-8 justify-start items-center h-[75%] w-[50%] rounded-[12px] border-2 border-[#1C1B1F]">
-        <img src={ImgLogin} alt="cat image" className="w-[15rem]" />
-        <h2 className="font-bold text-[2rem] my-[2rem]">Log In</h2>
+    <div className="bg-[#171717] h-[100vh] flex justify-center items-center p-12">
+      <div className="bg-secondary p-8 w-full flex flex-col justify-start items-center text-textColor rounded-[12px] h-[75%] max-h-[35rem] max-w-[40rem]">
+        <div className="flex w-full item-center justify-between gap-2 mb-[3rem]">
+          <div className="flex gap-2 items-center">
+            <Link to="/" className={`bg-mainColor flex flex-col justify-center items-center rounded-full h-[0.75rem] w-[0.75rem] ${width > 850 ? "h-[1rem] w-[1rem]" : ""}`}></Link>
+            <span className={`bg-mediumDark flex flex-col justify-center items-center rounded-full h-[0.75rem] w-[0.75rem] ${width > 850 ? "h-[1rem] w-[1rem]" : ""}`}></span>
+            <span className={`bg-darkMain flex flex-col justify-center items-center rounded-full h-[0.75rem] w-[0.75rem] ${width > 850 ? "h-[1rem] w-[1rem]" : ""}`}></span>
+          </div>
+            <img src={Logo} alt="vector of our company" />          
+        </div>
+        <h2 className={`text-[1.25rem] font-semibold text-center ${width > 850 ? "text-[2rem]" : ""} `}>Ready to get back on track?</h2>
         <form
           onSubmit={handleLogin}
-          className="gap-4 flex flex-col w-[100%] justify-center items-center"
+          className="flex flex-col gap-4 w-full mt-12"
         >
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="border border-[#1C1B1F] p-2 rounded-[8px] w-[50%]"
+            className="bg-[#171717] p-4 rounded-[8px]"
           />
           <input
             type="password"
-            placeholder="Hasło"
+            placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="border border-[#1C1B1F] p-2 rounded-[8px] w-[50%]"
+            className="bg-[#171717] p-4 rounded-[8px]"
           />
-          <div className="flex flex-col items-center gap-4 mt-6 w-[100%]">
+          <div className="flex flex-col justify-center items-center gap-8 mt-4">
             <button
               type="submit"
-              className="bg-[#1C1B1F] w-[50%] text-white h-[3.5rem] rounded-[12px]"
+              className="bg-button/10 border border-stroke rounded-[8px] w-full h-[2.75rem] flex items-center justify-center"
             >
               Login
             </button>
-            <Link to="/register" className="font-semibold opacity-75">
+            <Link to="/register" className="text-button">
               I dont have account
             </Link>
           </div>
         </form>
         {error && (
-          <p className="text-red-700 mt-4 font-semibold text-[1.25]">{error}</p>
+          <p className="text-red-400 mt-4">{error}</p>
         )}
       </div>
     </div>
