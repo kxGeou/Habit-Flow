@@ -1,23 +1,18 @@
 import Button from "../Components/ui/Button";
-import { IoIosArrowDown } from "react-icons/io";
 import useWindowWidth from "../hooks/UseWindowWidth";
+import Habit from "./ui/Habit";
 export default function HeroSection() {
 
   const width = useWindowWidth()
 
   return (
-    <section className="flex  flex-col items-center justify-center w-full">
-      <h1 className={`transition-all duration-300 text-textColor font-extrabold leading-[110%] ${width < 750 ? "text-[5rem]" : "text-[7rem]"} ${width < 450 ? "text-[4rem]" : ""}`}>
-        HabitFlow
-      </h1>
-      <p className={`transition-all duration-300 text-textColor mb-12 opacity-75 font-light ${width < 750 ? "text-[1rem]" : "text-[1.3rem]"} ${width < 450 ? "text-[0.75rem]" : ""}`}>
-        A simple way to track your habits and build a better you
-      </p>
-
-      <Button title="Get Started" width={20} height={3}></Button>
-      <div className="p-4 bg-button/10 border border-stroke rounded-full animate-bounce mt-[3rem]">
-        <IoIosArrowDown fill="#676767" />
-      </div>
+    <section className={`transition-all duration-300 flex items-center  w-full ${width < 1300 ? "px-8" : ""}  ${width < 1000 ? "justify-center" : "justify-between"}`} >
+        <div className={`transition-all duration-300 flex flex-col justify-center items-start w-[50%]  ${width < 1000 ? "w-full" : ""}`}>
+          <h1 className={`transition-all duration-300 text-textColor font-medium text-[40px] mb-2 ${width < 500 ? "text-[30px]" : ""}`}>Turn Daily Actions into <span className="font-black text-mainColor">Lifelong Habits</span> with Ease</h1>
+          <p className={`transition-all duration-300 text-[22px]   text-textColor opacity-75 mb-12 ${width < 500 ? "text-[18px]" : ""}`}>Track habits effortlessly, stay consistent, and unlock rewards for your progress. Build better routines with HabitFlow!</p>
+          <Button title="Get Started" width={20}></Button>
+        </div>
+        {width < 1000 ? "" : <Habit></Habit>}
     </section>
   );
 }

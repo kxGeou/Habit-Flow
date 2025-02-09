@@ -1,7 +1,7 @@
 import User from "../assets/user.png";
 import Challenge from "./Challenges";
 import { useState } from "react";
-
+import useWindowWidth from "../hooks/UseWindowWidth";
 type UserIconPrompts = {
   expLevel?: number;
 };
@@ -27,10 +27,10 @@ const challenges = [
     icon: "💪",
   },
 ];
-
 function UserBar({ expLevel }: UserIconPrompts) {
+  const width = useWindowWidth();
   return (
-    <div className="flex flex-col justify-center items-center gap-12">
+    <div className={`flex flex-col justify-center items-center gap-12 `}>
       <img src={User} alt="minimalistic image of user" className="w-[15rem]" />
       <div className="bg-secondary py-3 px-5 w-[25rem] rounded-[12px]">
         <p className="text-textColor font-semibold text-[16px] mb-2">
@@ -53,6 +53,7 @@ function UserBar({ expLevel }: UserIconPrompts) {
 }
 
 export default function UserIcon() {
+  const width = useWindowWidth();
   const [userExp, setUserExp] = useState<number>(0);
   const [completedChallenges, setCompletedChallenges] = useState<number[]>([]);
 
@@ -65,7 +66,7 @@ export default function UserIcon() {
 
   return (
     <article className="w-full flex justify-between items-end gap-[5rem]">
-      <UserBar expLevel={userExp} />
+      {width < 1200 ? "" : <UserBar expLevel={userExp} />}
 
       <div className="flex flex-col gap-6 text-textColor">
         <p className="font-semibold text-[20px]">Your Challenges:</p>

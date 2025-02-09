@@ -4,14 +4,14 @@
 
 :root {
         --text : #f0f0f0;
-        --secondary : #17171a;
-        --secondaryBox : #212023;
+        --secondary : #262629;
+        --secondaryBox : #171717;
         --mobileBgc : #70628e;
-        --mainColor : #9852EE;
-        --mediumDark : #6737A3;
-        --darkMain : #3D1F62;
-        --stroke : #676767;
-        --button :  217, 217, 217;
+        --mainColor : #00A97F;
+        --mediumDark : #008463;
+        --darkMain : #006A50;
+        --stroke : #8E8E8E;
+        --button :  142, 142, 142;
     }
 
 
