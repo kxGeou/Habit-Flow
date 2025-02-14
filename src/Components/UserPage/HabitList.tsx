@@ -54,7 +54,7 @@ const HabitCard: React.FC<{ habit: Habit; onComplete: (id: string) => void; onEd
           <div key={index} className={`w-[45px] h-[45px] rounded-md ${index < habit.daysCompleted ? "bg-mainColor  shadow-[rgba(7,_65,_210,_0.1)_0px_0px_10px] shadow-mainColor" : "bg-[#171717]"}`} />
         ))}
       </div>
-      <button className="bg-[#171717] p-4 rounded-[8px] border border-transparent transition-all duration-500 mt-4 w-full hover:border hover:border-mainColor" onClick={() => onComplete(habit.id)}>Complete</button>
+      <button className="bg-[#171717] p-3 rounded-[8px] border border-transparent transition-all duration-500 mt-4 w-full hover:border hover:border-mainColor" onClick={() => onComplete(habit.id)}>Complete</button>
       
     </div>
   );
