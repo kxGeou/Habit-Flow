@@ -63,15 +63,6 @@ const HabitCard: React.FC<{ habit: Habit; onComplete: (id: string) => void; onEd
 
 
 
-
-
-
-
-
-
-
-
-
 const HabitsPage: React.FC = () => {
   const [habitName, setHabitName] = useState("");
   const [habits, setHabits] = useState<Habit[]>([]);

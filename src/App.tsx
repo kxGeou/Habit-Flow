@@ -12,7 +12,7 @@ const App: React.FC = () => {
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const logOut = onAuthStateChanged(auth, (user) => {
       if (user) {
         setUserEmail(user.email);
       } else {
@@ -20,7 +20,7 @@ const App: React.FC = () => {
       }
     });
 
-    return () => unsubscribe();
+    return () => logOut();
   }, []);
 
   return (

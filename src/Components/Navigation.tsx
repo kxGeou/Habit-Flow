@@ -15,7 +15,7 @@ export default function Navigation() {
       <section className="flex items-center justify-between gap-[2rem]">
         <a
           href="#"
-          className="transition-all duration-300 opacity-[75%] border-b-2 border-b-transparent text-white hover:opacity-100 hover:border-b-stroke "
+          className="transition-all duration-300 opacity-[75%] border-b-[3px] border-b-transparent text-white hover:opacity-100 hover:border-b-mainColor "
         >
           About
         </a>
