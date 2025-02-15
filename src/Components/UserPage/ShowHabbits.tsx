@@ -26,7 +26,7 @@ const AddHabit: React.FC = () => {
         type="text"
         value={habitName}
         onChange={(e) => setHabitName(e.target.value)}
-        placeholder="Nazwa nawyku"
+        placeholder="Nazwa nawyku "
       />
       <button onClick={handleAddHabit}>Dodaj nawyk</button>
       {error && <p>{error}</p>}
