@@ -4,7 +4,7 @@ import AboutUs from "../Components/AboutUs"
 import Footer from "../Components/Footer"
 import Motivation from "../Components/Motivation"
 import ShowCase from "../Components/ShowCase"
-import './index.css';  
+import '../index.css';  
 
 export default function MainFile() {
   return (
