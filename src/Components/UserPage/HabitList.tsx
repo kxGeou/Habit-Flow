@@ -133,7 +133,7 @@ const HabitsPage: React.FC = () => {
     updatedHabit.lastCompleted = Timestamp.now();
 
     if (updatedHabit.daysCompleted >= 35) {
-      updatedHabit.daysCompleted = 0;
+      updatedHabit.daysCompleted = 0; 
       updatedHabit.completedCycles += 1;
     }
 
@@ -161,7 +161,7 @@ const HabitsPage: React.FC = () => {
 
   return (
     <div className="p-6 text-white bg-[#171717]">
-      <div className="max-w-[1150px] flex flex-col justify-start items-center m-auto h-[100dvh]">
+      <div className="max-w-[1150px] flex flex-col justify-start items-center m-auto">
         <h2 className="text-2xl font-bold mb-4">Your Habits</h2>
         <div className="mb-4 flex gap-2 w-[75%] ">
           <input

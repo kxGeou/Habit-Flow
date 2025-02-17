@@ -4,9 +4,7 @@ import AboutUs from "../Components/AboutUs"
 import Footer from "../Components/Footer"
 import Motivation from "../Components/Motivation"
 import ShowCase from "../Components/ShowCase"
-import useWindowWidth from "../hooks/UseWindowWidth"
 export default function MainFile() {
-  const width = useWindowWidth()
   return (
     <div className={`bg-[#171717]`}>
       <main className="max-w-[1150px] flex flex-col m-auto py-8">

@@ -1,5 +1,4 @@
 import React from 'react';
-import { auth } from '../../firebase/firebase';
 
 const UserInfo: React.FC<{ userEmail: string, onLogout: () => void }> = ({ userEmail, onLogout }) => {
   return (

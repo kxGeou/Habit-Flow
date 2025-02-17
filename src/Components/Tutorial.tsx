@@ -1,10 +1,7 @@
-import React, { useState, useCallback } from "react";
+import React from "react";
 import User from "../assets/user.png";
 import useWindowWidth from "../hooks/UseWindowWidth";
 
-type UserProps = {
-  userExp: number;
-};
 
 const UserBar = React.memo(({ userExp, streak }: { userExp: number, streak: number }) => {
 

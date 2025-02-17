@@ -28,7 +28,6 @@ const challenges = [
   },
 ];
 function UserBar({ expLevel }: UserIconPrompts) {
-  const width = useWindowWidth();
   return (
     <div className={`flex flex-col justify-center items-center gap-12 `}>
       <img src={User} alt="minimalistic image of user" className="w-[15rem]" />
