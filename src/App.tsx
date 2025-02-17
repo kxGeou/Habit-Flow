@@ -7,6 +7,8 @@ import RegisterScreen from './/pages/RegisterScreen'
 import MainFile from './pages/MainFile';
 import HabitsList from './Components/UserPage/HabitList';
 import LoginScreen from './pages/LoginScreen';
+import './index.css';  
+
 const App: React.FC = () => {
   const [userEmail, setUserEmail] = useState<string | null>(null);
 
