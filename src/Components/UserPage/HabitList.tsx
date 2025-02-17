@@ -141,7 +141,6 @@ const HabitsPage: React.FC = () => {
     updatedHabits[habitIndex] = updatedHabit;
     setHabits(updatedHabits);
 
-    // Aktualizacja w Firestore
     await updateDoc(doc(db, "users", userId!, "habits", habitId), {
       daysCompleted: updatedHabit.daysCompleted,
       completedCycles: updatedHabit.completedCycles,
