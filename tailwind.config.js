@@ -1,5 +1,4 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
@@ -10,14 +9,13 @@ module.exports = {
         secondary: "var(--secondary)",
         secondaryBox: "var(--secondaryBox)",
         mobileBgc: "var(--mobileBgc)",
-        button : "rgba(var(--button))",
+        button: "rgba(var(--button))",
         textColor: "var(--text)",
-        stroke : "var(--stroke)",
-        mediumDark : "var(--mediumDark)",
+        stroke: "var(--stroke)",
+        mediumDark: "var(--mediumDark)",
         darkMain: "var(--darkMain)"
       }
     },
   },
   plugins: [],
-}
-
+};
