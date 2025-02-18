@@ -5,7 +5,7 @@
     "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "isolatedModules": true,
@@ -19,8 +19,8 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true,
 
-    "noEmit": false,  // Zmień na false
-    "outDir": "./dist"  // Określ folder wyjściowy (np. dist)
+    "noEmit": false,
+    "outDir": "./dist" // Określ folder wyjściowy
   },
   "include": ["src"]
 }
