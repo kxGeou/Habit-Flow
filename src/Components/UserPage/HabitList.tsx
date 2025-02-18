@@ -160,23 +160,25 @@ const HabitsPage: React.FC = () => {
   };
 
   return (
-    <div className="p-6 text-white bg-[#171717]">
-      <div className="max-w-[1150px] flex flex-col justify-start items-center m-auto">
-        <h2 className="text-2xl font-bold mb-4">Your Habits</h2>
-        <div className="mb-4 flex gap-2 w-[75%] ">
-          <input
-            type="text"
-            value={habitName}
-            onChange={(e) => setHabitName(e.target.value)}
-            placeholder="Dodaj nowy nawyk"
-            className=" p-4 rounded-[8px] w-full bg-secondary "
-          />
-          <button onClick={handleAddHabit} className="bg-mediumDark text-white p-2 rounded-lg w-[15%]">Add Habit</button>
-        </div>
-        <div className="flex flex-wrap gap-4 w-full justify-center mt-12">
-          {habits.map((habit) => (
-            <HabitCard key={habit.id} habit={habit} onComplete={handleCompleteHabit} onEdit={handleEditHabit} />
-          ))}
+    <div className="h-[100vh] bg-[#171717]">
+      <div className="p-6 text-white bg-[#171717]">
+        <div className="max-w-[1150px] flex flex-col justify-start items-center m-auto">
+          <h2 className="text-2xl font-bold mb-4">Your Habits</h2>
+          <div className="mb-4 flex gap-2 w-[75%] ">
+            <input
+              type="text"
+              value={habitName}
+              onChange={(e) => setHabitName(e.target.value)}
+              placeholder="Dodaj nowy nawyk"
+              className=" p-4 rounded-[8px] w-full bg-secondary "
+            />
+            <button onClick={handleAddHabit} className="bg-mediumDark text-white p-2 rounded-lg w-[15%]">Add Habit</button>
+          </div>
+          <div className="flex flex-wrap gap-4 w-full justify-center mt-12">
+            {habits.map((habit) => (
+              <HabitCard key={habit.id} habit={habit} onComplete={handleCompleteHabit} onEdit={handleEditHabit} />
+            ))}
+          </div>
         </div>
       </div>
     </div>

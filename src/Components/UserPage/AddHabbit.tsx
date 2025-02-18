@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { addHabit } from '../../firebase/addHabit.tsx';
+import { addHabit } from '../../firebase/addHabit';
 
 const AddHabbit: React.FC = () => {
   const [habitName, setHabitName] = useState('');
